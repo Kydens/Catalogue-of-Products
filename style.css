@@ -13,21 +13,23 @@ body {
 /***** Product Container *****/
 
 .productsContainer {
-    margin: 45px;
-}
-
-.productsContainer .row .col {
-    display: flex;
-    justify-content: center;
+    margin: 45px 45px 45px 50px;
+    display: grid;
+    gap: 3rem;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
     align-items: center;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.productsContainer .row .col .card {
-    margin: 30px 30px;
+.productsContainer .card {
+    width: 17em;
+    height: 27em;
     cursor: pointer;
 }
 
-.productsContainer .row .col .card img {
+.productsContainer img {
     border-bottom: 5px solid #d1d1d1;
 }
 
@@ -91,7 +93,7 @@ body {
 /***** Footer *****/
 .footer {
     width: 100%;
-    height: 20vh;
+    height: 18vh;
     background-color: rgb(52, 58, 64);
     display: flex;
     align-items: center;
@@ -102,6 +104,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    cursor: default;
 }
 
 .footer .table-responsive .table tbody tr td {
@@ -112,11 +115,35 @@ body {
     color: white
 }
 
-@media only screen and (max-width: 480px) {
+
+/***** Any device execpt open in Monitor *****/
+
+@media only screen and (max-width: 1500px) {
     body {
         background-size: 2000vh;
+        width: 100%;
+        height: 100vh;
     }
 
+    /***** Product Container  *****/
+
+    .productsContainer {
+        display: grid;
+        gap: 1rem;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .productsContainer .card {
+        width: 15em;
+        height: 24em;
+        cursor: pointer;
+    }
+
+    /***** Preview Container *****/
     .previewContainer .card {
         display: none;
         padding: 3rem 2rem 4rem 2rem;
@@ -135,12 +162,36 @@ body {
         color: black;
     }
 }
+
+
+/***** Tablet Media  *****/
 
 @media only screen and (max-width: 800px) {
     body {
         background-size: 2000vh;
+        width: 100%;
+        height: 100vh;
     }
 
+    /***** Product Container  *****/
+
+    .productsContainer {
+        display: grid;
+        gap: 1rem;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .productsContainer .card {
+        width: 15em;
+        height: 24em;
+        cursor: pointer;
+    }
+
+    /***** Preview Container *****/
     .previewContainer .card {
         display: none;
         padding: 3rem 2rem 4rem 2rem;
@@ -160,3 +211,198 @@ body {
     }
 }
 
+
+/***** Mobile Phones Media except Android *****/
+
+@media only screen and (max-width: 480px) {
+    body {
+        background-size: 2000vh;
+        width: 100%;
+        height: 100vh;
+    }
+
+    /***** Product Container  *****/
+
+    .productsContainer {
+        display: grid;
+        gap: 1rem;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productsContainer .card {
+        width: 11em;
+        height: 24em;
+        cursor: pointer;
+    }
+
+    .previewContainer .card {
+        display: none;
+        padding: 3rem 2rem 4rem 2rem;
+        background: #ffff;
+        position: relative;
+        margin: 2rem;
+    }
+
+    /***** Preview Container *****/
+
+    .previewContainer .card a {
+        border: 2px solid black;
+        background-color: #f1f1f1;
+        text-decoration: none;
+        position: relative;
+        top: 30px;
+        padding: .5em;
+        color: black;
+    }
+}
+
+
+/***** Mobile Phones Media For Android *****/
+
+@media only screen and (max-width: 380px) {
+    body {
+        background-size: 2000vh;
+        width: 100%;
+        height: 100vh;
+    }
+
+    /***** Product Container  *****/
+
+    .productsContainer {
+        display: grid;
+        gap: 1rem;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productsContainer .card {
+        width: 10em;
+        height: 24em;
+        cursor: pointer;
+    }
+
+    .previewContainer .card {
+        display: none;
+        padding: 3rem 2rem 4rem 2rem;
+        background: #ffff;
+        position: relative;
+        margin: 2rem;
+    }
+
+    /***** Preview Container *****/
+
+    .previewContainer .card a {
+        border: 2px solid black;
+        background-color: #f1f1f1;
+        text-decoration: none;
+        position: relative;
+        top: 30px;
+        padding: .5em;
+        color: black;
+    }
+}
+
+
+/***** Any device Media under 350px *****/
+
+@media only screen and (max-width: 350px) {
+    body {
+        background-size: 2000vh;
+        width: 100%;
+        height: 100vh;
+    }
+
+    /***** Product Container  *****/
+
+    .productsContainer {
+        display: grid;
+        gap: 1rem;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productsContainer .card {
+        width: 9em;
+        height: 24em;
+        cursor: pointer;
+    }
+
+    .previewContainer .card {
+        display: none;
+        padding: 3rem 2rem 4rem 2rem;
+        background: #ffff;
+        position: relative;
+        margin: 2rem;
+    }
+
+    /***** Preview Container *****/
+
+    .previewContainer .card a {
+        border: 2px solid black;
+        background-color: #f1f1f1;
+        text-decoration: none;
+        position: relative;
+        top: 30px;
+        padding: .5em;
+        color: black;
+    }
+}
+
+
+/***** For Apple Watch *****/
+
+@media only screen and (max-width: 170px) {
+    body {
+        background-size: 2000vh;
+        width: 100%;
+        height: 100vh;
+    }
+
+    /***** Product Container  *****/
+
+    .productsContainer {
+        display: grid;
+        gap: 1rem;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .productsContainer .card {
+        width: 9em;
+        height: 24em;
+        cursor: pointer;
+    }
+
+    .previewContainer .card {
+        display: none;
+        padding: 3rem 2rem 4rem 2rem;
+        background: #ffff;
+        position: relative;
+        margin: 2rem;
+    }
+
+    /***** Preview Container *****/
+
+    .previewContainer .card a {
+        border: 2px solid black;
+        background-color: #f1f1f1;
+        text-decoration: none;
+        position: relative;
+        top: 30px;
+        padding: .5em;
+        color: black;
+    }
+}
