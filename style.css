@@ -1,0 +1,119 @@
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(Assets/background2.jpg);
+    background-size: auto;
+}
+
+/***** Product Container *****/
+
+.productsContainer {
+    margin: 45px;
+}
+
+.productsContainer .row .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productsContainer .row .col .card {
+    margin: 30px 30px;
+    cursor: pointer;
+}
+
+.productsContainer .row .col .card img {
+    border-bottom: 5px solid #d1d1d1;
+}
+
+/***** Preview Container *****/
+
+.previewContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.previewContainer .card {
+    display: none;
+    padding: 3rem 2rem 6rem 2rem;
+    background: #ffff;
+    position: relative;
+    margin: 2rem;
+}
+
+.previewContainer .card .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.previewContainer .card .card-body {
+    border-top: 3px solid #d1d1d1;
+    padding: 10px;
+    background-color: #f1f1f1;
+
+}
+
+.previewContainer .card a {
+    border: 2px solid black;
+    background-color: #f1f1f1;
+    text-decoration: none;
+    position: fixed;
+    bottom: 135px;
+    padding: .5em;
+    color: black;
+}
+
+.previewContainer .card a:hover {
+    background-color: black;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+.previewContainer .card.active {
+    display: inline-block;
+}
+
+/***** Footer *****/
+.footer {
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(52, 58, 64);
+    display: flex;
+    align-items: center;
+}
+
+.footer .table-responsive .table tbody tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footer .table-responsive .table tbody tr td {
+    padding: 5px;
+}
+
+.footer .table-responsive .table tbody tr td a {
+    color: white
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: 2000vh;
+    }
+}
